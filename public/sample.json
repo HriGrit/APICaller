@@ -1,0 +1,28 @@
+[
+	{
+		"createdAt": "2021-12-17T07:09:25.106Z",
+		"avatar": "https://cdn.fakercloud.com/avatars/laasli_128.jpg",
+		"Bio": "Magni placeat laboriosam reiciendis in officiis non nihil placeat.",
+		"jobTitle": "Dynamic Web Designer",
+		"profile": {
+			"username": "Xander.Hammes",
+			"firstName": "Marilyne",
+			"lastName": "Ruecker",
+			"email": "Micaela_Schoen@yahoo.com"
+		},
+		"id": "1"
+	},
+	{
+		"createdAt": "2021-12-17T10:04:31.795Z",
+		"avatar": "https://cdn.fakercloud.com/avatars/dgclegg_128.jpg",
+		"Bio": "Est aut sed temporibus hic natus mollitia.",
+		"jobTitle": "National Accountability Architect",
+		"profile": {
+			"username": "Travis.Shanahan",
+			"firstName": "Hans",
+			"lastName": "Connelly",
+			"email": "Jena33@gmail.com"
+		},
+		"id": "2"
+	}
+]
