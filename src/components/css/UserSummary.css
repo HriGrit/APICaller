@@ -1,0 +1,20 @@
+.avatar:hover {
+    filter: drop-shadow(0px 0px 16px rgba(0, 122, 204, 1));
+  }
+
+.p, .pp{
+    transition: background-color 1.5s ease;
+    transition: transform 1.5s ease;
+    transition: font-size 1.5s ease;
+}
+.p:hover, .pp:hover{
+    transform: scale(1.1);
+    background-color: rgba(0, 122, 204, 1); 
+    font-size: 1.1em; 
+    transition: 1.2s;
+    color: white;
+}
+
+.pp:hover{
+    transform: scale(1.05);
+}

@@ -4,11 +4,15 @@ import AvatarInitials from './AvatarInitials';
 
 function UserList({ papa }) {
     const [data, setData] = useState([]);
+
     const [isFetching, setIsFetching] = useState(false);
     const [error, setError] = useState(null);
+
     const [visibleUsers, setVisibleUsers] = useState([]);
+
     const [startIndex, setStartIndex] = useState(0);
     const [endIndex, setEndIndex] = useState(4);
+
     const [inputUsername, setInputUsername] = useState('');
     const [isUsernameAvailable, setIsUsernameAvailable] = useState(false);
 
@@ -42,7 +46,7 @@ function UserList({ papa }) {
         }
 
         return () => {
-            isfetch = false; // Clean up to prevent state updates on unmounted component
+            isfetch = false;
         };
     }, [isFetching, startIndex, endIndex]);
 
@@ -73,7 +77,8 @@ function UserList({ papa }) {
         const filteredUsers = data.filter(user => user.profile.username.toLowerCase().includes(keyword));
         const remainingUsers = data.filter(user => !user.profile.username.toLowerCase().includes(keyword));
         const sortedUsers = [...filteredUsers, ...remainingUsers];
-
+        setStartIndex(0);
+        setEndIndex(4);
         setIsUsernameAvailable(keyword === '' || filteredUsers.length > 0);
         // console.log(sortedUsers);
         if (filteredUsers.length > 0) {
@@ -85,7 +90,7 @@ function UserList({ papa }) {
 
     const handleFetchData = (e) => {
         e.preventDefault();
-        setIsFetching(true); // Trigger the fetching process
+        setIsFetching(true);
     };
 
     const sendtopapa = (id) => {
@@ -100,7 +105,7 @@ function UserList({ papa }) {
                 </div>
             ) : (
                 <>
-                    <button className="fixed top-12 right-[45%] bg-green-200 p-7 px-9 rounded-lg mx-auto block" onClick={handleFetchData}>
+                    <button className="absolute top-8 right-[41%] bg-green-200 p-7 px-9 rounded-lg" onClick={handleFetchData}>
                         {isFetching ? 'Fetching...' : 'Fetch Data'}
                     </button>
                     <div className='h-[60px] bg-red-200 text-4xl text-center p-2 rounded-lg mb-[5%]'>
@@ -111,18 +116,16 @@ function UserList({ papa }) {
                             <button
                                 className="bg-blue-200 p-2 rounded-lg"
                                 onClick={handlenewuser}
-
                             >
-                                Show Next 5 Users
+                                Show Next 4 Users
                             </button>
                         )}
                         {startIndex > 1 && (
                             <button
                                 className="bg-blue-200 p-2 rounded-lg"
                                 onClick={handleprevoius}
-
                             >
-                                Show Prev 5 Users
+                                Show Prev 4 Users
                             </button>
                         )}
                     </div>
