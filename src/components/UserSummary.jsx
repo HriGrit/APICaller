@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import AvatarInitials from './AvatarInitials';
-import "./css/UserSummary.css";
+import "./UserSummary.css";
 
 function UserSummary({ user }) {
     const [userSummary, setUserSummary] = useState(null);
